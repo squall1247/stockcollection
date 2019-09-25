@@ -1,0 +1,12 @@
+# stock_list.html
+{% extends 'base.html' %}
+{% block content %}
+{% for stock in object_list %}
+ <div class="">
+   <p>{{ stock.stock_name }}</p>
+   <h3><a href="{% url 'stocks:stock_id' stock.id %}"> View detail </a></h3>
+ </div>
+{% endfor %}
+<a href="{% url 'stocks:create' %}"> Add new stock </a><br>
+<a href="{% url 'account_logout' %}">Logout</a><br>
+{% endblock content %}

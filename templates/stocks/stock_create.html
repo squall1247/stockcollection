@@ -1,0 +1,19 @@
+# stock_create.html
+{% extends "base.html" %}
+{% block title %} Create new stock data{% endblock %}
+{% block content%}
+<h2> Add a new stock </h2>
+<form method='POST'>
+  {% csrf_token %} 
+  {{ form.as_p }}
+<input type="submit" value="save" />
+</form>
+
+{% if stock.stock_name %}
+    <a href="{% url 'stocks:stock_id' stock.id %}"> Cancel </a>
+{% else %}
+    {{ stock.stock_name}}
+    <a href="{% url 'stocks:index' %}"> Back </a>
+{% endif %}
+
+{% endblock %}
