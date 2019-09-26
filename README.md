@@ -8,6 +8,7 @@ The stock management system is a web server for creating and managing stock in d
 * Database administrator can manage the DB on admin page.
 * User can add or update a stock information after login successfully.
 * It supports Restful API by Django REST framework.
+* Restful API basic Authentication.
 
 ----
 ## Development environment
@@ -29,6 +30,6 @@ The following urls can be accessed.
 
 ----
 ## Todos
-* Restful API authentication.
+* Enhance rest authentication.
 * Extend stock table in DB that can store more information (e.g., history price, EPS, free cash flow, etc.).
 * Add delete function.
