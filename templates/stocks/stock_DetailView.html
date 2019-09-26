@@ -7,5 +7,6 @@
   <li>Current Price : {{ stock.stock_price}} </li>
 </ul>
 <a href="{% url 'stocks:update' stock.id %}"> Edit </a>
+<br><a href="{% url 'stocks:delete' stock.id %}"> Delete</a>
 <br><a href="{% url 'stocks:index' %}"> Back</a>
 {% endblock %}

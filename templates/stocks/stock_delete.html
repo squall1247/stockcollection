@@ -1,0 +1,11 @@
+# stock_list.html
+{% extends 'base.html' %}
+{% block content %}
+
+<form method="post">{% csrf_token%}
+    <p>Are you sure you want to delete "{{ object }}"? </p>
+    <input type="submit" value="Confirm">
+</form>
+<br><a href="{% url 'stocks:index' %}"> Cancel</a>
+
+{% endblock content %}

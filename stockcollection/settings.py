@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     # For 3rd party login
-    'allauth.socialaccount.providers.github', 
+    'allauth.socialaccount.providers.github',
 ]
 
 MIDDLEWARE = [
