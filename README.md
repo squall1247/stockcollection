@@ -6,18 +6,25 @@ The stock management system is a web server for creating and managing stock in d
 
 * Sign-in by both local and social accounts (only github now).
 * Database administrator can manage the DB on admin page.
-* User can add or update a stock information after login successfully.
+* User can add/delete/update a stock information after login successfully.
 * It supports Restful API by Django REST framework.
 * Restful API basic Authentication.
 
 ----
 ## Development environment
-* Python 3.6.6
-* Django 2.2.5
+* Ubuntu 14.04.1
+* Python 3.4.3
+* Django 2.0.13
 * Database is SQLite
 
 ----
 ## Usage
+Install the following packages
+
+    $ pip3 install djangorestframework
+    $ pip3 install django-allauth
+
+Start the server
 
     $ python manage.py runserver "ip_address:port"
 The following urls can be accessed.
@@ -30,6 +37,6 @@ The following urls can be accessed.
 
 ----
 ## Todos
+* Add Rest API test cases.
 * Enhance rest authentication.
 * Extend stock table in DB that can store more information (e.g., history price, EPS, free cash flow, etc.).
-* Add delete function.
