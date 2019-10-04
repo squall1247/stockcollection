@@ -7,12 +7,14 @@ from .forms import StockForm
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
+
 # Create your views here.
 class StockViewSet(viewsets.ModelViewSet):
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
     permission_classes = (IsAuthenticated,)
-
+    
+    
 '''
 Class base view
 '''
